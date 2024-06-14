@@ -1,0 +1,50 @@
+{
+  "name": "lde",
+  "version": "0.1.0",
+  "description": "Lurch Deductive Engine (LDE)",
+  "type": "module",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "clean-jsdoc-theme": "^4.2.14",
+    "coffeescript": "^2.7.0",
+    "esm": "^3.2.25",
+    "jsdoc": "^3.6.7",
+    "mocha": "^10.0.0",
+    "puppeteer": "^15.1.1",
+    "tidy-jsdoc": "^1.4.1"
+  },
+  "scripts": {
+    "test": "node src/database/generate.js && node --trace-warnings tests/all-in-puppeteer.js",
+    "docs": "rm -f tutorials/output/*.md && node scripts/pre-docs.js && rm -rf docs && jsdoc src/* -d docs -R doc-main.md -c jsdoc-conf.json -u tutorials/output/ && node scripts/post-docs.js",
+    "build-db": "node src/database/generate.js",
+    "show-docs": "open docs/index.html",
+    "test-server": "node src/database/generate.js && node tests/test-server.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lurchmath/lde.git"
+  },
+  "author": "Nathan Carter (ncarter@bentley.edu)",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lurchmath/lde/issues"
+  },
+  "homepage": "https://github.com/lurchmath/lde#readme",
+  "dependencies": {
+    "algebrite": "^1.4.0",
+    "chalk": "^5.0.1",
+    "earley-parser": "^1.3.0",
+    "fast-xml-parser": "^4.3.6",
+    "inquirer": "^9.2.11",
+    "katex": "^0.16.9",
+    "mathlive": "^0.98.4",
+    "peggy": "^3.0.2",
+    "pegjs-backtrace": "^0.2.1",
+    "react": "^18.2.0",
+    "strip-ansi": "^7.0.1"
+  }
+}
