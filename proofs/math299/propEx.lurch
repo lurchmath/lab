@@ -1,4 +1,4 @@
-include libs/Prop
+include ../libs/Prop
 /////////////////////////////////////////////
 
 ➤ "Theorem: Q ⇒ (P or Q) and (Q or P)"

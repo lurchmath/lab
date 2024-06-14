@@ -1,4 +1,4 @@
-include libs/Number Theory
+include ../libs/Number Theory
 // needed for a BIH because Number Theory no longer includes PredThm
 Rule: :{ :x=y :𝜆P(y) 𝜆P(x) }
 ////////////////////////////////////////////////////////////////////

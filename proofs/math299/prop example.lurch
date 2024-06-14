@@ -1,4 +1,4 @@
-include libs/Prop
+include ../libs/Prop
 /////////////////////////////////////////////
 
 Thm: { Q ⇒ (Q or P) and (P or Q)}

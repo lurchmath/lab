@@ -1,4 +1,4 @@
-include libs/Reals
+include ../libs/Reals
 {
 	Declare is even
 	Rule: :{ :n is even   n=2⋅m for some m }

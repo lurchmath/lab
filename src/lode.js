@@ -188,7 +188,7 @@ global.inspect = (x , depth=1) => console.log(util.inspect(x , {
 } ) )
 
 // load an initialization file or js script and execute it
-global.initialize = function(fname='initproofs') { 
+global.initialize = function(fname='../init') { 
   const init = fs.readFileSync(checkExtension(fname),{ encoding:'utf8'}) 
   eval.apply(this,[init+'\n'])  
 }
@@ -259,13 +259,13 @@ global.matchMaker = (decl,pstr,estr) => {
 /** 
  * A library path 
  */
-global.libPath = './libs/'
+global.libPath = '../libs/'
 
 // the path to proof definition files
-global.proofPath = './proofs/'
+global.proofPath = '../proofs/'
 
 // the path to parser definition files
-global.parserPath = './parsers/'
+global.parserPath = '../parsers/'
 
 // the file extension used by default for libraries and proof files. Don't
 // include the . here for easy use in RegExp's
@@ -502,7 +502,7 @@ rpl.defineCommand( "list", {
 rpl.defineCommand( "test", {
   help: "Run the default test script ('acidtests.js').",
   action() { 
-    initialize('utils/acidtests')
+    initialize('../utils/acidtests')
     this.displayPrompt()
   }
 })

@@ -13,7 +13,7 @@ acid=[]
 const loadtest = (name, folder='acid tests') => { 
   if (DEBUG) console.log(`loading acid test ${folder}/${name}`)
   try {
-    acid.push(loadDoc(`proofs/${folder}/${name}`)) 
+    acid.push(loadDoc(`${proofPath}/${folder}/${name}`)) 
   } catch {
     acid.push(xPen(`Error loading acid test: ${name}`))
     console.log(`Error loading acid test: ${name}`)
@@ -43,7 +43,7 @@ let failed = 0
 
 // test the asciimath Peggy parser by itself
 try { 
-  const s=lc(parse(loadStr('parsers/LurchParserTests')))
+  const s=lc(parse(loadStr(`${parserPath}/LurchParserTests`)))
   passed++
   console.log(`${itemPen('Parser Test:')} → ok`)
 } catch (e) { 
