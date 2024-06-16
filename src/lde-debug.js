@@ -4,7 +4,7 @@
  * To import n-compact validation in a web page, just load this file.
  * e.g. 
  * 
- *  <script type='module' src="../index.js"></script>
+ *  <script type='module' src="../lde-debug.js"></script>
  *  
  * and adjust the path to src accordingly.
  */
@@ -22,24 +22,24 @@ if (typeof window === 'object') {
   console.log(`In node.`)
 }
  
-import * as Lurch from '../index.js'
+import * as Lurch from './lde-cdn.js'
 Object.assign( self, Lurch )
 
-import { Problem } from '../matching/problem.js'
+import { Problem } from './lde-cdn.js'
 self.Problem = Problem
 
-import CNF from '../validation/conjunctive-normal-form.js'
+import CNF from './lde-cdn.js'
 self.CNF = CNF
 
-import { parse } from './parsers/lurch-to-putdown.js'
+import { parse } from '../parsers/lurch-to-putdown.js'
 self.parse = parse
 self.lurchToPutdown = parse
 
-import { parse as lurchToLatex } from './parsers/lurch-to-tex.js'
+import { parse as lurchToLatex } from '../parsers/lurch-to-tex.js'
 self.lurchToLatex = lurchToLatex
 self.tex = lurchToLatex
 
-import { latexToLurch } from './parsers/tex-to-lurch.js'
+import { latexToLurch } from '../parsers/tex-to-lurch.js'
 self.latexToLurch = latexToLurch
 
 import Interpret from './interpret.js'
@@ -51,13 +51,13 @@ Object.assign( self, Compact )
 import Utils from './utils.js'
 Object.assign( self, Utils )
 
-import { Message } from '../../../lurchmath/validation-messages.js'
+import { Message } from '../../lurchmath/validation-messages.js'
 self.Message = Message
 
-import { downloadFile } from '../../../lurchmath/upload-download.js'
+import { downloadFile } from '../../lurchmath/upload-download.js'
 self.downloadFile = downloadFile
 
-import * as TEST from './utils/acidtestsweb.js'
+import * as TEST from '../utils/acidtestsweb.js'
 self.test = () => TEST.test(testarg)
 
 // Useful Lode and Reporting utilities

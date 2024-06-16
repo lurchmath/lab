@@ -4,9 +4,7 @@
 //
 
 // Imports
-import CNF from '../../lde/src/validation/conjunctive-normal-form.js'
-import { LogicConcept } from '../../lde/src/logic-concept.js'
-import { Environment } from '../../lde/src/environment.js'
+import CNF, { LogicConcept, Environment } from './lde-cdn.js'
 import  Utilities from './utils.js'
 const { tab, indent, subscript } = Utilities
 

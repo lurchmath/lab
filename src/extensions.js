@@ -5,12 +5,8 @@
  * @namespace Extensions 
  */
 // imports
-import { LogicConcept } from '../../lde/src/logic-concept.js'
-import { Expression } from '../../lde/src/expression.js'
-import { Environment } from '../../lde/src/environment.js'
-import { Symbol as LurchSymbol } from '../../lde/src/symbol.js'
-import { Declaration } from '../../lde/src/declaration.js'
-import { Application } from '../../lde/src/application.js'
+import { LogicConcept, Expression, Environment, LurchSymbol, 
+         Declaration, Application } from './lde-cdn.js'
 import { CNFProp } from './CNFProp.js'
 
 ///////////////////////////////////////////////////////////////////////////////

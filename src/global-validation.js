@@ -106,21 +106,11 @@
 import Algebrite from '../dependencies/algebrite.js'
 const compute = Algebrite.run
 // import LDE tools
-// import { LogicConcept } from '../logic-concept.js'
-// import { Expression } from '../expression.js'
-// import { Symbol as LurchSymbol } from '../symbol.js'
-// import { isAnEFA } from '../matching/expression-functions.js'
-// import { Declaration } from '../declaration.js'
-// import { Environment } from '../environment.js'
-// import { Problem } from "../matching/problem.js"
-import CNF from '../../lde/src/validation/conjunctive-normal-form.js'
-// import Formula from '../formula.js'
-// import Scoping from '../scoping.js'
-// import Validation from '../validation.js'
-import {
+import CNF, {
   LogicConcept, Expression, Declaration, Environment, LurchSymbol,
   Matching, Formula, Scoping, Validation, Application
-} from '../../lde/src/index.js'
+} from './lde-cdn.js'
+
 
 const Problem = Matching.Problem
 const isAnEFA = Matching.isAnEFA

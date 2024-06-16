@@ -40,7 +40,7 @@
 import {
   Application, Environment, Expression, Declaration, LurchSymbol,
   BindingExpression, Formula
-} from '../../lde/src/index.js'
+} from './lde-cdn.js'
 
 import { processShorthands } from './parsing.js'
 import Utilities from './utils.js'

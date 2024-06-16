@@ -48,10 +48,10 @@ import { latexToLurch } from '../parsers/tex-to-lurch.js'
 // following).
 import './disable-event-target.js'
 
-// with that disabled, now we can load everything from index.js and other LDE tools
-import * as Lurch from '../../lde/src/index.js'
-import { Problem } from '../../lde/src/matching/problem.js'
-import CNF from '../../lde/src/validation/conjunctive-normal-form.js'
+// with that disabled, now we can load everything we need from the LDE
+import * as Lurch from './lde-cdn.js'
+import { Problem } from './lde-cdn.js'
+import CNF from './lde-cdn.js'
 
 // Lab Code
 //
@@ -342,7 +342,7 @@ global.makedoc = makedoc
 // store the folders we want to be scanned as part of the indexing page
 // relative folders are relative to the root of the server (the lurch folder 
 // of the LFY)
-global.contentFolders = ['math','math299','dropbox','help','299solns']
+global.contentFolders = ['math','help','299assignments','299solns','299dropbox']
 global.toc = () => generatePage(...contentFolders)
 global.scrape = scrape
 global.scrapeToGomez = () => 
@@ -536,9 +536,9 @@ rpl.defineCommand( "compileparser", {
   action() {
     const compile = (name) => {
         console.log(defaultPen(`Compiling Lurch parser to lurch-to-${name}.js...`))
-        execStr(`cd parsers && peggy --cache --format es -o lurch-to-${name}.js lurch-to-${name}.peggy`)
-        execStr(`cd parsers && cp lurch-to-${name}.js ../../../../lurchmath/parsers/`)
-        execStr(`cd parsers && cp lurch-to-${name}.peggy ../../../../lurchmath/parsers/`)
+        execStr(`cd ../parsers && peggy --cache --format es -o lurch-to-${name}.js lurch-to-${name}.peggy`)
+        execStr(`cd ../parsers && cp lurch-to-${name}.js ../../lurchmath/parsers/`)
+        execStr(`cd ../parsers && cp lurch-to-${name}.peggy ../../lurchmath/parsers/`)
       }
 
     try {

@@ -14,8 +14,7 @@
 //
 // Imports
 //
-import { Environment } from '../../lde/src/environment.js'
-import { Symbol as LurchSymbol } from '../../lde/src/symbol.js'
+import { Environment, LurchSymbol } from './lde-cdn.js'
 import './extensions.js'
 
 /**
