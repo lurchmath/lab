@@ -597,7 +597,10 @@ rpl.defineCommand( "makedocs", {
   action() {
     console.log(defaultPen('Building docs...')) 
     try {
-      execStr('rm -rf docs && jsdoc ./* -d docs -c utils/jsdoc-conf.json -u tutorials/ && node utils/post-docs')
+      execStr(
+        `rm -rf ../docs &&
+        jsdoc .. -d ../docs/ -c ../utils/jsdoc-conf.json -u ../tutorials/ && 
+        node ../utils/post-docs`)
       console.log(defaultPen('...done'))
     } catch (err) {
       console.log('Error building docs.')
@@ -610,7 +613,7 @@ rpl.defineCommand( "makedocs", {
 rpl.defineCommand( "showdocs", {
   help: "Open the jsdocs index.html page in the browser.",
   action() { 
-    exec('open docs/index.html')
+    exec('open ../docs/index.html')
     this.displayPrompt()
   }
 })

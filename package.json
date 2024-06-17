@@ -1,7 +1,7 @@
 {
-  "name": "lde",
+  "name": "lab",
   "version": "0.1.0",
-  "description": "Lurch Deductive Engine (LDE)",
+  "description": "Lurch Validation Tools",
   "type": "module",
   "directories": {
     "doc": "docs",
@@ -17,23 +17,16 @@
     "puppeteer": "^15.1.1",
     "tidy-jsdoc": "^1.4.1"
   },
-  "scripts": {
-    "test": "node src/database/generate.js && node --trace-warnings tests/all-in-puppeteer.js",
-    "docs": "rm -f tutorials/output/*.md && node scripts/pre-docs.js && rm -rf docs && jsdoc src/* -d docs -R doc-main.md -c jsdoc-conf.json -u tutorials/output/ && node scripts/post-docs.js",
-    "build-db": "node src/database/generate.js",
-    "show-docs": "open docs/index.html",
-    "test-server": "node src/database/generate.js && node tests/test-server.cjs"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lurchmath/lde.git"
+    "url": "git+https://github.com/lurchmath/lab.git"
   },
-  "author": "Nathan Carter (ncarter@bentley.edu)",
+  "author": "Ken Monks (monks@scranton.edu)",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/lurchmath/lde/issues"
+    "url": "https://github.com/lurchmath/lab/issues"
   },
-  "homepage": "https://github.com/lurchmath/lde#readme",
+  "homepage": "https://github.com/lurchmath/lab#readme",
   "dependencies": {
     "algebrite": "^1.4.0",
     "chalk": "^5.0.1",
